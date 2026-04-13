@@ -194,22 +194,21 @@ a {
 /* Hero Section */
 .hero {
   position: relative;
+  min-height: 800px;
   height: 100vh;
-  min-height: 700px;
   display: flex;
   align-items: center;
-  padding: 0 5%;
-  margin-top: 50px;
+  padding: 100px 5%;
 }
 
 .hero-image-wrap {
   position: absolute;
   top: 0;
   right: 0;
+  bottom: 0;
   width: 55%;
-  height: 100%;
   border-bottom-left-radius: 200px;
-  overflow: hidden;
+  overflow: hidden; /* Added bottom: 0 instead of height: 100% for consistency */
   box-shadow: -10px 10px 40px rgba(0,0,0,0.1);
   animation: slideInRight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -269,7 +268,7 @@ a {
 }
 
 .row-image {
-  flex: 1;
+  flex: 0 0 45%;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0,0,0,0.1);
@@ -286,7 +285,7 @@ a {
 }
 
 .row-text {
-  flex: 1;
+  flex: 0 0 48%;
 }
 
 .row-title {
